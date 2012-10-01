@@ -22,6 +22,7 @@ using AForge.Imaging.Filters;
 using System.IO;
 using System.Drawing.Imaging;
 using System.Threading;
+using WPFSpark;
 
 
 namespace vipbug2
@@ -29,7 +30,7 @@ namespace vipbug2
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : SparkWindow
     {
         public MainWindow()
         {

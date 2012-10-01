@@ -1,8 +1,28 @@
-﻿<Window x:Class="vipbug2.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525" Closing="Window_Closing">
+﻿<wpfspark:SparkWindow x:Name="mainView" 
+    x:Class="vipbug2.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:wpfspark="clr-namespace:WPFSpark;assembly=WPFSpark"
+    WindowFrameMode="CanMaximize"
+    InnerBorderBrush="Gray"
+    InnerBorderCornerRadius="2"
+    InnerBorderThickness="0"
+    OuterBorderBrush="Black"
+    OuterBorderCornerRadius="2"
+    OuterBorderThickness="0"
+    IsAboutEnabled="false"
+    Icon="vip.ico"
+    Style="{StaticResource CustomSparkWindowStyle}"
+    Title="MainWindow" Height="450" Width="600" Closing="Window_Closing" Foreground="#FFE4E4E4">
+    <wpfspark:SparkWindow.TitleEffect>
+        <DropShadowEffect/>
+    </wpfspark:SparkWindow.TitleEffect>
+
     <Grid>
-        <Image Name="labcamCanvas" Stretch="Fill" Initialized="emgu_Initialized" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
+        <Image Name="labcamCanvas" Stretch="Fill" Initialized="emgu_Initialized" Grid.ColumnSpan="2" />
     </Grid>
-</Window>
+</wpfspark:SparkWindow>

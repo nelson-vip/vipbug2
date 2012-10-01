@@ -8,10 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using WPFSpark;
 
 namespace vipbug2
 {
-    partial class MainWindow : Window
+    partial class MainWindow : SparkWindow
     {
         List<string> modules = new List<String> 
         {
